@@ -26,5 +26,14 @@ int main(){
 	std::cout << isAlphanumeric("ABCD") << std::endl;        // true (1)
 	std::cout << isAlphanumeric("Abcd1234xyz") << std::endl; // true (1)
 	std::cout << isAlphanumeric("KLMN 8-7-6") << std::endl;  // false (0)
+	
+	std::cout << nestedParens("((()))") << std::endl;      // true (1)
+	std::cout << nestedParens("()") << std::endl;          // true (1)
+	std::cout << nestedParens("") << std::endl;            // true (1)
+
+	std::cout << nestedParens("(((") << std::endl;         // false (0)
+	std::cout << nestedParens("(()") << std::endl;         // false (0)
+	std::cout << nestedParens(")(") << std::endl;          // false (0)
+	std::cout << nestedParens("a(b)c") << std::endl;       // false (0)
 	return 0;
 }

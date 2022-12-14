@@ -57,3 +57,19 @@ bool isAlphanumeric(std::string s){
 	
 	return false;
 }
+
+bool nestedParens(std::string s){
+	if(s.substr(0,1)=="("&&s.substr(s.length()-1,1)==")"){
+		return nestedParens(s.substr(1,s.length()-2));
+	}
+	else if(s.length()<2){
+		if(s!="("&&s!=")"){
+			return true;
+		}
+		return false;
+	}
+	else{
+		return false;
+	}
+	return false;
+}

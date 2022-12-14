@@ -33,7 +33,18 @@ TEST_CASE("sumArray"){
 }
 
 TEST_CASE("isAlphanumeric"){
-CHECK(isAlphanumeric("ABCD")==true);
-CHECK(isAlphanumeric("Abcd1234xyz")==true);
-CHECK(isAlphanumeric("KLMN 8-7-6")==false);
+	CHECK(isAlphanumeric("ABCD")==true);
+	CHECK(isAlphanumeric("Abcd1234xyz")==true);
+	CHECK(isAlphanumeric("KLMN 8-7-6")==false);
+}
+
+TEST_CASE("nestedParens"){
+	CHECK(nestedParens("((()))")==true);   
+	CHECK(nestedParens("()")==true);         
+	CHECK(nestedParens("")==true);          
+
+	CHECK(nestedParens("(((")==false);       
+	CHECK(nestedParens("(()") ==false);     
+	CHECK(nestedParens(")(") ==false);         
+	CHECK(nestedParens("a(b)c")==false);
 }
