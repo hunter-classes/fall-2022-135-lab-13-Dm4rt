@@ -23,3 +23,12 @@ int sumRange(int left, int right){
 		return 0;
 	}
 }
+
+int sumArray(int *arr, int size){
+	if(size==0){
+		return 0;
+	}
+	else{
+		return arr[size-1]+sumArray(arr, size-1);
+	}
+}
