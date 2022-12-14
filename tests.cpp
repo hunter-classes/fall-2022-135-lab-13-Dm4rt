@@ -31,3 +31,9 @@ TEST_CASE("sumArray"){
 	
 	delete[] arr;
 }
+
+TEST_CASE("isAlphanumeric"){
+CHECK(isAlphanumeric("ABCD")==true);
+CHECK(isAlphanumeric("Abcd1234xyz")==true);
+CHECK(isAlphanumeric("KLMN 8-7-6")==false);
+}

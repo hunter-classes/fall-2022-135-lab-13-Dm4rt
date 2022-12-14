@@ -22,5 +22,9 @@ int main(){
     std::cout << "Sum is " << sum1 << std::endl;  // Sum is 43
 	
 	delete[] arr;
+	
+	std::cout << isAlphanumeric("ABCD") << std::endl;        // true (1)
+	std::cout << isAlphanumeric("Abcd1234xyz") << std::endl; // true (1)
+	std::cout << isAlphanumeric("KLMN 8-7-6") << std::endl;  // false (0)
 	return 0;
 }
